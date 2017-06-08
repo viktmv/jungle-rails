@@ -25,6 +25,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+    p user_params
     if @user.save
       session[:user_id] = @user.id
       redirect_to '/'
@@ -65,6 +66,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation)
+      params.require(:user).permit(:email, :name, :password, :password_confirmation)
     end
 end
