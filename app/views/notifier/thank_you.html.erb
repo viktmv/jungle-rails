@@ -1,0 +1,20 @@
+
+Hi <%= @account.name %>, your order details are as follows:
+  <% LineItem.where(order_id: @order.id).each do |line_item|  %>
+    <% if product = Product.find_by(id: line_item.product_id) %>
+      <% item_total = product.price * line_item.quantity %>
+      <div>
+        <h3><%= product.name %></h3>
+        <span><%= product.description %></span>
+        <p><b>Price:</b> <%= product.price %></p>
+        <p><b>Quantity:</b> <%= line_item.quantity %></p>
+        <p><b>Item total:</b> <%= item_total %></p>
+      </div>
+    <% end %>
+  <% end %>
+<div>
+  <h3>TOTAL:</h3>
+  <p><%= @order.total %></p>
+</div>
+
+Thanks for making an order with us! Please check back often.

@@ -53,6 +53,8 @@ class OrdersController < ApplicationController
       end
     end
     order.save!
+    p order
+    Notifier.thank_you(current_user, order).deliver_now
     order
   end
 
