@@ -16,9 +16,19 @@
       </thead>
       <tbody>
         <% LineItem.where(order_id: @order.id).each do |line_item|  %>
-        <%= render 'item', line_item: line_item %>
+        <%= render 'item', line_item: line_item, total: 0 %>
         <% end %>
       </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="4">
+            TOTAL:
+          </th>
+          <th>
+            <%= @order.total %>
+          </th>
+        </tr>
+      </tfoot>
     </table>
   </div>
 
