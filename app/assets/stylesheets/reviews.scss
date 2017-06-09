@@ -1,13 +1,18 @@
+.reviews-area {
+  margin-top: 50px;
+}
+
 .review {
   margin: 0;
   padding: 0;
-  margin-top: 50px;
   display: flex;
   justify-content: space-around;
   border: 1px solid purple;
+  border-collapse: collapse;
   line-height: 2em;
   word-break: break-all;
   .reviewer {
+    width: 15%;
   }
 
   .description {
