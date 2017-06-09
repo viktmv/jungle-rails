@@ -1,6 +1,6 @@
 class Admin::DashboardController < ApplicationController
-  admin_auth
 
   def show
+    # admin_auth
   end
 end
