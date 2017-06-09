@@ -132,5 +132,20 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+# USERS
+puts 'Re-creating user'
+User.destroy_all
+
+user1 = User.create(email: 'example@test.com',
+password_digest: 'SOMEUNIQUESTRING',
+name: 'John Wick')
+
+# REVIEWS
+puts 'Re-creating reviews'
+Review.destroy_all
+
+rev1 = user1.reviews.create(product: Product.find_by(name: 'Red Bookshelf'), description: 'Love the colour', rating: 4)
+rev1 = user1.reviews.create(product: Product.find_by(name: 'Electric Chair'), description: 'I\'d love to put one of these babies in my basement!', rating: 5)
+rev1 = user1.reviews.create(product: Product.find_by(name: 'Russian Spy Shoes'), description: 'Meh', rating: 1)
 
 puts "DONE!"
