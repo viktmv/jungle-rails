@@ -3,7 +3,7 @@
 
   .review-delete-btn {
     position: absolute;
-    top: 15px;
+    top: 5px;
     right: -50px;
   }
 }
@@ -14,38 +14,61 @@
   position: relative;
   display: flex;
   justify-content: space-around;
-  border: 1px solid purple;
   border-collapse: collapse;
-  line-height: 2em;
   word-break: break-all;
+
+  .date-created {
+    margin: 0;
+    padding: 5px;
+  }
+
   .reviewer {
-    width: 15%;
+    padding: 5px;
   }
 
   .description {
     margin: 0;
-    padding: 15px;
-    width: 55%;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
-    line-height: 1em;
-    font-size: 1.1em;
+    padding: 5px;
     text-align: left;
   }
 
   .rating {
     text-align: left;
     margin: 0;
-    padding: 10px;
-    font-size: 1.3em;
+    padding: 5px;
 
     .rating-num {
       color: red;
     }
   }
 }
+
 .reviews-form {
+  padding-left: 5%;
+  padding-right: 5%;
+
+  .textarea-wrapper,
+  .ratings-wrapper {
+    display: inline-block;
+  }
+
+  .textarea-wrapper {
+    width: 85%;
+  }
+
+  .ratings-wrapper{
+    width: 10%;
+    float: right;
+
+    select {
+      height: 40px;
+      font-size: 1.5em;
+    }
+  }
+  
   textarea {
      resize: none;
+     width: 100%;
+     border-radius: 15px;
   }
 }

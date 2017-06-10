@@ -5,13 +5,10 @@
   </header>
 
   <article class="product-detail">
-
     <div class="row">
-
       <div class="col-sm-4">
         <%= image_tag @product.image.url, class: 'main-img' %>
       </div>
-
       <div class="col-sm-8">
         <dl class="dl-horizontal">
           <dt>Name</dt>
@@ -44,17 +41,20 @@
     </div>
     <% if current_user.present? %>
       <div class="row reviews-form">
+        <h3 class="text-center">Add your review</h3>
         <%= form_for :review, url: product_reviews_path(@product) do |f| %>
-          <%= f.label :description %>:<br>
-          <%= f.text_area :description %><br>
-
-          <%= f.label :rating %>:
-          <%= f.select :rating, [1,2,3,4,5] %><br />
-
+         <div class="textarea-wrapper">
+            <%= f.label :description %>:<br>
+            <%= f.text_area :description %><br>
+         </div>
+         <div class="ratings-wrapper">
+            <%= f.label :rating %>:<br>
+            <%= f.select :rating, [1,2,3,4,5] %>
+          </div>
+          <br>
           <%= f.submit %>
         <% end  %>
       </div>
       <% end %>
   </article>
-
 </section>
