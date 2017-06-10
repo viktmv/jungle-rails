@@ -24,15 +24,13 @@ Cart allowing users to edit their order (increase, decrease or remove items).
 ![](./docs/confirmed-order.png)
 
 ```
-Order confirmation page is displayed to the user once "Submit Order" button is pressed,
-and payment is processed.
+Order confirmation page is displayed to the user once "Submit Order" button is pressed, and payment is processed.
 
 ```
 ![](./docs/add-review.png)
 
 ```
-Products have user reviews. Everybody can view them, but only
-logged-in users can add reviews for products
+Products have user reviews. Everybody can view them, but only logged-in users can add reviews for products
 ```
 
 ![](./docs/review-added.png)
@@ -47,10 +45,10 @@ Users can delete their own reviews if they would like to
 2. Create `config/database.yml` by copying `config/database.example.yml`
 3. Create `config/secrets.yml` by copying `config/secrets.example.yml`
 4. Run `bin/rake db:reset` to create, load and seed db
-5. Create .env file based on .env.example
-6. Put Admin and Email credentials you want to use into appropriate .env vars
+5. Create `.env` file based on `.env.example`
+6. Put Admin and Email credentials you want to use into appropriate `.env` vars
 7. Sign up for a Stripe account
-8. Put Stripe (test) keys into appropriate .env vars
+8. Put Stripe (test) keys into appropriate `.env` vars
 9. Run `bin/rails s -b 0.0.0.0` to start the server
 
 ## Stripe Testing
