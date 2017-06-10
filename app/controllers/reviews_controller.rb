@@ -16,7 +16,6 @@ class ReviewsController < ApplicationController
     end
   end
 
-
   def destroy
     Review.find(params[:id]).destroy
     respond_to do |format|
@@ -34,5 +33,4 @@ class ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:description, :rating)
   end
-
 end

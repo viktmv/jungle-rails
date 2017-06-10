@@ -1,9 +1,8 @@
 class Notifier < ApplicationMailer
   default from: 'no-reply@jungle.com'
 
-  def thank_you(recipient, order)
-    @account = recipient
+  def thank_you(email, order)
     @order = order
-    mail(to: recipient.email, subject: "Your order number is #{order.id}")
+    mail(to: email, subject: "Your order number is #{order.id}")
   end
 end
