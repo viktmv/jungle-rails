@@ -26,11 +26,12 @@
       </div>
     </div>
     <div class="row reviews-area text-center">
-      <% @product.reviews.each do |review| %>
+      <% @product.reviews.sort { |a,b| b.created_at - a.created_at }.each do |review| %>
         <article class="review">
-          <b class="h4 reviewer"><%= review.user.name %>:</b>
-          <span class="description"><%= review.description %></span>
-          <span class="rating">My rating: <span class="rating-num"><%= review.rating %></span>/5</span>
+          <span class="date-created col-sm-3"><%=review.created_at.strftime("%m/%d/%Y at %I:%M%p")%></span>
+          <b class="reviewer text-left col-sm-2" ><%= review.user.name %>:</b>
+          <span class="description col-sm-8"><%= review.description %></span>
+          <span class="rating col-sm-1"><span class="rating-num"><%= review.rating %></span>/5</span>
           <% if review.user == current_user %>
             <%= link_to fa_icon('trash'),
                         [@product, review],
