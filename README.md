@@ -19,13 +19,26 @@ Cart with no items in it
 
 ```
 Cart allowing users to edit their order (increase, decrease or remove items).
-```
 
+```
 ![](./docs/confirmed-order.png)
 
 ```
 Order confirmation page is displayed to the user once "Submit Order" button is pressed,
 and payment is processed.
+
+```
+![](./docs/add-review.png)
+
+```
+Products have user reviews. Everybody can view them, but only
+logged-in users can add reviews for products
+```
+
+![](./docs/review-added.png)
+
+```
+Users can delete their own reviews if they would like to
 ```
 
 ## Setup
