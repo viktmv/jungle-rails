@@ -2,6 +2,11 @@
 
 A mini e-commerce application built with Rails 4.2
 
+
+## Demo on Heroku
+
+* https://jungle-rails-project.herokuapp.com/
+
 ## Project Overview
 ![](./docs/index.png)
 
